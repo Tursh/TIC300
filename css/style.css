@@ -1,0 +1,77 @@
+/*
+    This is the css of my project fot TIC300.
+*/
+
+*{
+    background: #111 url('../img/bg.jpg');
+    color: white;
+    font-family: monospace
+}
+
+#text_button{
+    color: darkblue
+}
+
+#circle_button{
+    border: 5px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin-left: 50px;
+    background-color: red
+}
+
+h2{
+    color: black;
+    margin-bottom: 10px
+}
+
+h3{
+    position: absolute;
+    left: 700px;
+    top: 0px
+}
+
+#ul{
+    position: absolute;
+    left: 660px;
+    top: 30px
+}
+
+ul li{
+	list-style-type: none
+}
+
+li{
+    font-family:monospace;
+    font-size: 15px
+}
+
+ul{
+	position: absolute;
+	left:  10;
+}
+
+ol li{
+    display: inline;
+    list-style-type: none
+}
+
+a:visited{
+    color: blue
+}
+
+a:hover{
+    color: purple
+}
+
+a:active{
+    color: 
+}
+
+a{
+    text-decoration: none;
+}
