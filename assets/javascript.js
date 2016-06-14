@@ -1,4 +1,3 @@
-console.log("Program boot");
 //Constructor Person
 function Person(){
     this.hope = {
@@ -139,7 +138,7 @@ function Person(){
     },
     this.seefriend = {
         name: "Memory",
-        quantity: 0,
+        quantity: main.memory.quantity,
         solveID: "solveseefriend",
         msgID: "seefriend",
         infoID: "memoryprop",
@@ -190,6 +189,7 @@ var main = new Person();
 function add(parameter){
     parameter.quantity += 1;
     console.log("There is " + parameter.name);
+	return 0;
 };
 
 //Visual Part
@@ -205,14 +205,12 @@ function clock(parameter){
     document.getElementById(parameter.solveID).innerHTML = ""; //delete de solve
     document.getElementById(parameter.loot).innerHTML = ""; //delete the loot
     document.getElementById(parameter.needID).innerHTML = "";//delete the riquerement
-	document.getElementById(parameter.solveID).onclick = false;//disable the onclick
     parameter.clock = true;//clock active
     parameter.timer = 0;//reset the timer
     var inter = setInterval(function(){
         document.getElementById(parameter.info).innerHTML = ("[" + parameter.timer + "%]");//print out the %
         parameter.timer++//add 1%
         if(parameter.timer === 100){
-			document.getElementById(parameter.solveID).onclick = document.getElementById(parameter.solveID).prev_click;
             parameter.clock = false;//clock disactive
             add(parameter);//add one to the parameter quantity
 			restriction(parameter);//if need something it will remove it
@@ -229,6 +227,7 @@ function clock(parameter){
             refresh();
         }
     }, parameter.time);
+	return 0;
 };
 
 //Refresh the Messages
@@ -362,6 +361,7 @@ function refresh(){
         document.getElementById(main.seefriend.solveID).innerHTML = "";
         document.getElementById(main.seefriend.msgID).innerHTML = "";
     }
+	return 0;
 };
 
 //List Prop
@@ -375,6 +375,7 @@ function createlist(parameter){
     var att = document.createAttribute("id");
     att.value = parameter.infoID; 
     li.setAttributeNode(att)
+	return 0;
 };
 
 //restriction
@@ -390,4 +391,5 @@ function restriction(parameter){
 				document.getElementById(main.knowledge.infoID).innerHTML = main.knowledge.quantity + " " + main.knowledge.name;
 		}
 	}
+	return 0;
 };
