@@ -138,7 +138,7 @@ function Person(){
     },
     this.seefriend = {
         name: "Memory",
-        quantity: main.memory.quantity,
+        quantity: this.memory.quantity,
         solveID: "solveseefriend",
         msgID: "seefriend",
         infoID: "memoryprop",
